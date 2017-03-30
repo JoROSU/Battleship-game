@@ -1,4 +1,6 @@
-
+body{
+    font-family: 'Josefin Sans', sans-serif;
+}
 .jumbotron{
     background-image: url('../images/waves.png');
     background-repeat: no-repeat;
@@ -7,6 +9,9 @@
     background-size: 113%;
     height: 360px;
     background-position-x: right;
+    font-family: 'Amatic SC', cursive;
+    color:#ff9e00;
+    font-weight: 700;
 }
 .jumbotron .image-cont{
    text-align: right;
