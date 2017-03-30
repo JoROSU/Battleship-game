@@ -114,7 +114,7 @@ Tabla.prototype.ubacivanjeBrodova1=function(pozicija){
      }
   }else if (vertikalno== null && (kolona + duzinaBroda)>=10){
      for (var i = 0; i <duzinaBroda; i++) {
-       $("#"+red+(kolona+i)).css("background-color","Red");
+       $("#"+red+(kolona+i)).css("background-color","#638c9c");
      }
   }else{
     alert("Zbog duzine broda nije moguce unijeti brod u selektovano polje ");
