@@ -1,9 +1,4 @@
 
-$('*').css("border","1px solid Black");
-$(".tablaZaPostavljanje").css("position","relative");
-$(".odabirBrodova").css("position","absolute").css("top","300px");
-$(".tabelaZaPogadjanje").css("position","absolute").css("top","520px");
-$('body').css("height","100%")
 // klasa Tabela 
 var Tabla=function(){
 	this.kolona= ['1','2','3','4','5','6','7','8','9','10'];
@@ -33,7 +28,7 @@ Tabla.prototype.ubacivanjeTabele = function(velicinaKocke,topPozicija,nazivKlase
              position:"absolute",
              top: topPozicija+i * velicinaKocke+"px",
              left: j*velicinaKocke+"px",
-             border:'1px solid Red',
+             border:'1px solid #999',
              float:'left',
              value:0
 
@@ -192,7 +187,7 @@ Tabla.prototype.detektovanjePodmornice = function(nizPokusaja) {
 
  var tabela = new Tabla();
  var tabela1 = new Tabla();
- tabela.ubacivanjeTabele(20,50,'polje');
+ tabela.ubacivanjeTabele(30,50,'polje');
 tabela.ubacivanjeTabele(30,550,'polje1');
 
 
