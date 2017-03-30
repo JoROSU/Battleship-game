@@ -1,0 +1,61 @@
+body{
+    font-family: 'Josefin Sans', sans-serif;
+}
+.jumbotron{
+    background-image: url('../images/waves.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 113%;
+    height: 360px;
+    background-position-x: right;
+    font-family: 'Amatic SC', cursive;
+    color:#ff9e00;
+    font-weight: 700;
+}
+.jumbotron .image-cont{
+   text-align: right;
+}
+
+.jumbotron img{
+    width:120px;
+    margin:15px auto;
+}
+.title{
+    text-align:center;
+    margin:24px auto;
+}
+.title img{
+    width:35px;
+    margin: 0 15px;
+}
+.tablaUlaz{
+    height:400px;
+}
+
+input[type="checkbox"] {
+    display:none;
+}
+
+input[type="checkbox"] + label {
+    color:#15536b;
+}
+
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-2px 10px 0 0;
+    vertical-align:middle;
+    background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) left top no-repeat;
+    cursor:pointer;
+}
+
+input[type="checkbox"]:checked + label span {
+    background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -19px top no-repeat;
+}
+
+.form-group img{
+    width:50px;
+}
+
