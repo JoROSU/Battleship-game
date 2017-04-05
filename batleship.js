@@ -74,7 +74,6 @@ Tabla.prototype.mijestoUbacivanjaNaTabli = function() {
       idPoljaZaUbacivanje=$(this).attr("id");
       console.log(idPoljaZaUbacivanje);
       return idPoljaZaUbacivanje;
-
     }
     else {
        // $this.data('clicked', true);
@@ -103,23 +102,29 @@ Tabla.prototype.ubacivanjeBrodova1=function(pozicija){
   var red1 = ['A','B','C','D','E','F','G','H','I','J'];
   var indexReda=red1.indexOf(red);
   console.log("indeks reda je"+indexReda);
+    console.log("indeks kolone je "+kolona + 'broj zauzetih polja je ' + duzinaBroda );
   //sad unosum brodove 
   // na osnovu vrijednosti check boxa vertikalno i duzine broda unosimo brod tj cinimo polje crvenim
-  // 1 OVDE TREBA JOS MALO OVE USLOVE UTANACITI NE RADE KAKO TReba 
-  if(vertikalno==1 && (indexReda+duzinaBroda)>=10){
+  // 1 OVDE TREBA JOS MALO OVE USLOVE UTANACITI NE RADE KAKO TReba
+    if ((indexReda+duzinaBroda)>10){
+    alert ('Zbog duzine broda i izabrane pozicije nemoguce je postaviti brod! Izaberite novu poziciju.');
+
+
+}
+  if(vertikalno==1 && (indexReda+duzinaBroda)>10){
     //Niz od E, F, G , H..
     var red1=red1.slice(indexReda,(indexReda+duzinaBroda));
      for (var i = 0; i <duzinaBroda; i++) {
-       $("#"+red1[i]+(kolona)).css({"background-color" : "Red","value":"1"});
+       $("#"+red1[i]+(kolona)).attr('data-field', 'busy').css({"background-color" : "#638c9c","value":"1"});
      }
   }else if (vertikalno== null && (kolona + duzinaBroda)>=10){
      for (var i = 0; i <duzinaBroda; i++) {
-       $("#"+red+(kolona+i)).css("background-color","#638c9c");
+       $("#"+red+(kolona+i)).attr('data-field', 'busy').css("background-color","#638c9c");
      }
   }else{
     alert("Zbog duzine broda nije moguce unijeti brod u selektovano polje ");
   }
-  // osim sto smo unijeli crvenu pozadinu trebali bi nekako drzati evidenciju 
+  // osim sto smo unijeli crvenu pozadinu trebali bi nekako drzati evidenciju
 
   this.prebrojavnjeZauzetihPolja();
 };
