@@ -14,7 +14,7 @@ body{
     font-weight: 700;
 }
 .jumbotron .image-cont{
-   text-align: right;
+    text-align: right;
 }
 
 .jumbotron img{
@@ -31,6 +31,7 @@ body{
 }
 .tablaUlaz{
     height:400px;
+    margin:0 10%;
 }
 
 input[type="checkbox"] {
@@ -57,5 +58,40 @@ input[type="checkbox"]:checked + label span {
 
 .form-group img{
     width:50px;
+}
+.img-cont{
+    width: 110px;
+    display: inline-block;
+    text-align: right;
+}
+.subtittle{
+    text-align: center;
+    margin: 25px auto;
+}
+.message{
+    text-align: center;
+    height: 120px;
+    width: 58%;
+    margin: 25px auto;
+    background-image: url(../images/note.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+}
+.message h3{
+    height:60px;
+    color: #ff9e00;
+    font-weight:400;
+    font-size: 22px;
+    padding: 50px;
+    letter-spacing: 0.2em;
+}
+.message span{
+    color: #111;
+}
+
+.btn-start{
+    display:none;
 }
 
