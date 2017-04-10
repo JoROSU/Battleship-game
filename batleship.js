@@ -109,7 +109,7 @@ Tabla.prototype.ubacivanjeBrodova1 = function (pozicija) {
             $('.brod').remove(':checked');
         }
     } else {
-        document.getElementById("message").innerHTML = "Zbog duzine broda nije moguce unijeti brod u selektovano polje!";
+        document.getElementById("message").innerHTML = "Ship is too long. Try again!";
         $('.brod').prop('checked', false);
         this.brojUnesenihPolja -= (parseInt(duzinaBroda)) ;
     }
@@ -124,7 +124,7 @@ Tabla.prototype.prebrojavnjeZauzetihPolja = function () {
 
 
     if (this.brojUnesenihPolja >= 18) {
-        document.getElementById("message").innerHTML = "Brodovi na poziicijama.";
+        document.getElementById("message").innerHTML = "Time for play.";
         $('.brod').prop('checked', false);
         $('.odabirBrodova').hide();
         $('.btn-start').show();
@@ -153,12 +153,14 @@ Tabla.prototype.otkrivanjePodmornica = function (idPoljeZaPogadjanje) {
     this.brojPokusaja++;
     console.log("broj pokusaja je" + this.brojPokusaja);
 
-    var polje = $(".polje[id=" + idPoljeZaPogadjanje + "][background-color='Red']");
-    if (polje.length) {
+    var polje = $(".polje[id=" + idPoljeZaPogadjanje + "][background-color='busy']");
+    if (polje.length && this.brojPogodaka<18) {
         this.brojPogodaka++;
+    }else if (this.brojPogodaka==18){
+        this.ocijenaUspijesnosti();
     }
     console.log("broj pogodaka" + this.brojPogodaka);
-
+    
 };
 //console.log(daLiJePodmornica);
 //};
@@ -175,7 +177,14 @@ Tabla.prototype.detektovanjePodmornice = function (nizPokusaja) {
 };
 
 
-
+//Sada treba napraviti funkcija koja ocjenjuje uspjesnost igraca 
+Tabla.prototype.ocijenaUspijesnosti = function() {
+    if(this.brojPogodaka==this.brojUnesenihPolja && this.brojUnesenihPolja<30){
+        alert("Svaka Cast");
+    }else if(this.brojPogodaka==this.brojUnesenihPolja && this.brojUnesenihPolja<60){
+        alert("Nije lose");
+    };
+};
 
 
 
@@ -199,7 +208,7 @@ $("button").click(function ()
 });
 
 $(".brod").click(function () {
-    document.getElementById("message").innerHTML = "Izaberite polje na tabli!";
+    document.getElementById("message").innerHTML = "Choose position on the board!";
     $('.message-note').addClass('message');
 
 });
@@ -233,3 +242,5 @@ $(".polje1").click(function () {
 // return 'are you sure you want to leave?';
 
 // });
+
+

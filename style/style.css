@@ -81,7 +81,8 @@ input[type="checkbox"]:checked + label span {
 }
 .message h3{
     height:60px;
-    color: #ff9e00;
+    color: #15536b;
+    font-weight: 700;
     font-weight:400;
     font-size: 22px;
     padding: 50px;
@@ -94,4 +95,3 @@ input[type="checkbox"]:checked + label span {
 .btn-start{
     display:none;
 }
-
