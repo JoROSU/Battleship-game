@@ -1,5 +1,5 @@
 
-// klasa Tabela 
+// class Table
 var Tabla = function () {
     this.kolona = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
     this.red = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
