@@ -29,7 +29,7 @@ body{
     width:35px;
     margin: 0 15px;
 }
-.tablaUlaz{
+.mainTable{
     height:400px;
     margin:0 10%;
 }
@@ -73,7 +73,6 @@ input[type="checkbox"]:checked + label span {
     height: 120px;
     width: 58%;
     margin: 25px auto;
-    background-image: url(../images/note.png);
     background-repeat: no-repeat;
     background-position: center;
 
